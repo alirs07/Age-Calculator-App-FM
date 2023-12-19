@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Bold.ttf), url(assets/fonts/Poppins-BoldItalic.ttf),
+    url(assets/fonts/Poppins-ExtraBold.ttf), url(assets/fonts/Poppins-ExtraBoldItalic.ttf),
+    url(assets/fonts/Poppins-Italic.ttf), url(assets/fonts/Poppins-Regular.ttf);
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  --primary-clr: hsl(259, 100%, 65%);
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 40px 45px;
+  border-radius: 20px 20px 160px 20px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.input {
+  padding-right: 25px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 11px;
+  transition: color 0.2s;
+}
+
+.input input {
+  width: 90px;
+  border: 1px solid hsl(0, 0%, 86%);
+  padding: 10px 18px;
+  border-radius: 6px;
+  outline: none;
+  font-family: "Poppins";
+  font-size: 25px;
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+  transition: border 0.2s;
+}
+
+.input input::placeholder {
+  font-family: "Poppins";
+  font-weight: 700;
+  color: hsl(0, 1%, 55%);
+  font-size: 25px;
+}
+.input input:focus {
+  outline: 1px solid var(--primary-clr);
+}
+
+.cal-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.h-line {
+  width: 500px;
+  height: 1px;
+  background-color: hsl(0, 0%, 86%);
+}
+
+.cal-btn {
+  border: none;
+  background-color: var(--primary-clr);
+  border-radius: 100%;
+  padding: 20px 20px 17px 20px;
+  cursor: pointer;
+}
+.cal-btn svg {
+  width: 36px;
+  height: 36px;
+}
+
+.output h1 {
+  font-style: italic;
+  margin: 0;
+  font-weight: 800;
+  color: hsl(0, 0%, 8%);
+  font-size: 82px;
+  line-height: 1.1;
+}
+
+.output h1 span {
+  color: var(--primary-clr);
+  letter-spacing: 15px;
+}
+
+.invalid-input {
+  & h3 {
+    color: hsl(0, 100%, 67%);
+  }
+  & input {
+    border: 1px solid hsl(0, 100%, 67%);
+  }
+}
+
+.error-msg {
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
